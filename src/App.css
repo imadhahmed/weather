@@ -1,112 +1,55 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
 /* App.css */
 * {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-html {
-	background-color: #f7f7f7;
-}
-
-.app-name {
-	font-size: 2.3rem;
-	color: rgb(0, 144, 108);
-	margin-bottom: 16px;
-}
-
-.App {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 600px;
-	min-height: 440px;
-	background-color: rgb(255, 255, 255);
-	text-align: center;
-	margin: 128px auto;
-	border-radius: 10px;
-	padding-bottom: 32px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.city-search {
-	width: 100%;
-	max-width: 400px;
-	box-sizing: border-box;
-	border: 2px solid rgb(204, 204, 204);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+	  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  html {
+	@apply bg-[#0f172a];
+  }
+  .app-name {
+	@apply text-[2.3rem] text-[rgb(0,144,108)] mb-4;
+  }
+  .App {
+	@apply flex flex-col justify-center items-center w-[600px] min-h-[440px] bg-white  text-center shadow-[0_4px_10px_rgba(0,0,0,0.1)] mx-auto my-32 pb-8 rounded-[10px];
+  }
+  .city-search {
+	@apply w-full max-w-[400px] box-border text-base bg-[#e5eef0] bg-[10px_12px] bg-no-repeat transition-[width] duration-[0.4s] ease-[ease-in-out] text-[#333] px-10 py-3 rounded-[20px] border-2 border-solid border-[rgb(204,204,204)] focus:w-full;
 	outline: none;
-	border-radius: 20px;
-	font-size: 16px;
-	background-color: #e5eef0;
-	background-position: 10px 12px;
-	background-repeat: no-repeat;
-	padding: 12px 40px 12px 40px;
 	-webkit-transition: width 0.4s ease-in-out;
-	transition: width 0.4s ease-in-out;
-	color: #333;
-}
-
-.city-search:focus {
-	width: 100%;
-}
-
-.city-name {
-	font-size: 1.5rem;
-	color: #444;
-	margin-bottom: 8px;
-}
-
-.date {
-	font-size: 1.25em;
-	font-weight: 500;
-	color: #777;
-}
-
-.icon-temp {
-	font-size: 3rem;
-	font-weight: 700;
-	color: #1e2432;
-	text-align: center;
-}
-
-.deg {
-	font-size: 1.3rem;
-	vertical-align: super;
-}
-
-.des-wind {
-	font-weight: 500;
-	color: #666;
-}
-
-.error-message {
-	display: block;
-	text-align: center;
-	color: #d32f2f;
-	font-size: 24px;
-	margin-top: auto;
-}
-
-.Loader {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-}
-
-.Loader>div {
-	margin: 0 auto;
-}
-
-.weather-icon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.weather-icon img {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+  }
+  .city-name {
+	@apply text-2xl text-[#444] mb-2;
+  }
+  .date {
+	@apply text-[1.25em] font-medium text-[#777];
+  }
+  .icon-temp {
+	@apply text-5xl font-bold text-[#1e2432] text-center;
+  }
+  .deg {
+	@apply text-[1.3rem] align-super;
+  }
+  .des-wind {
+	@apply font-medium text-[#666];
+  }
+  .error-message {
+	@apply block text-center text-[#d32f2f] text-2xl mt-auto;
+  }
+  .Loader {
+	@apply flex justify-center items-center h-full;
+  }
+  .Loader > div {
+	@apply mx-auto my-0;
+  }
+  .weather-icon {
+	@apply flex justify-center items-center;
+  }
+  .weather-icon img {
+	@apply w-[100px] h-[100px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] rounded-[50%];
+  }
+  
