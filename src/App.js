@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFrown } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
-function GfGWeatherApp() {
+function WeatherApp() {
 	const [input, setInput] = useState('');
 	const [weather, setWeather] = useState({
 		loading: false,
@@ -75,7 +75,7 @@ function GfGWeatherApp() {
 	return (
 		<div className="App">
 			<h1 className="app-name">
-				Imadh Weather App
+				Weather App
 			</h1>
 			<div className="search-bar">
 				<input
@@ -134,4 +134,4 @@ function GfGWeatherApp() {
 	);
 }
 
-export default GfGWeatherApp;
+export default WeatherApp;
